@@ -1,0 +1,79 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+מחברות, מחזיקי מפתחות ומתנות מעוצבות אישית שמדברות ישר ללב. ב־LU (LOVE YOU) כל מוצר מותאם במיוחד עבורכם — כי מתנה אמיתית מרגישים. הזמינו עכשיו!
+
+### התאמה אישית
+https://example.com/customization
+הכלי שלנו להתאמה אישית מאפשר לכם לעצב כל מוצר מאפס — בחרו צבעים, טקסט ועיצוב ייחודי. מתנות מעוצבות אישית שאף אחד אחר לא יקבל. התחילו לעצב!
+
+### אודות
+https://example.com/about
+LU (LOVE YOU) נולדה מתוך אהבה לפרטים הקטנים ולמשמעות שמאחורי כל מתנה. גלו מי אנחנו, מה מניע אותנו ולמה אלפי לקוחות בוחרים בנו לרגעים הכי חשובים בחיים.
+
+### צור קשר
+https://example.com/contact
+רוצים מתנה מיוחדת בהתאמה אישית מלאה? צרו איתנו קשר עוד היום ונשמח לעזור לכם לתכנן את המוצר המושלם. אנחנו כאן בשבילכם — כתבו לנו ונחזור במהירות!
+
+### Products
+https://example.com/products
+המוצרים שלנו - LU (LOVE YOU)
+
+### Cart
+https://example.com/cart
+עגלת הקניות שלך
+
+### Checkout
+https://example.com/checkout
+תשלום
+
+### Login
+https://example.com/login
+התחברות לקוחות
+
+### Account
+https://example.com/account
+החשבון שלי
+
+### Order Success
+https://example.com/order-success
+תודה על ההזמנה
+
+### Product Detail
+https://example.com/product/:slug
+פרטי המוצר - LU (LOVE YOU)
+
+### Category
+https://example.com/category/:slug
+מוצרים - LU (LOVE YOU)
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
