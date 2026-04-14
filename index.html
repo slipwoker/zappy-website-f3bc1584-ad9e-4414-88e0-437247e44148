@@ -234,6 +234,233 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.index-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: visible;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding-bottom: 80px;
+  direction: rtl;
+}
+
+.index-hero-section .index-hero-bg-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.index-hero-section .index-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.index-hero-section .index-hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to left, rgba(46,42,38,0.82) 0%, rgba(46,42,38,0.55) 50%, rgba(46,42,38,0.18) 100%),
+    linear-gradient(to top, rgba(46,42,38,0.72) 0%, rgba(46,42,38,0.0) 60%);
+}
+
+.index-hero-section .index-hero-content-wrap {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 160px 64px 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  text-align: right;
+}
+
+.index-hero-section .index-hero-badge-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.index-hero-section .index-hero-badge {
+  display: inline-block;
+  background: rgba(201,123,99,0.22);
+  border: 1px solid rgba(201,123,99,0.55);
+  color: #F2D2B0;
+  font-family: 'Assistant', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 6px 18px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.index-hero-section .index-hero-h1 {
+  font-family: 'Assistant', sans-serif;
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-light);
+  margin: 0;
+  text-shadow: 0 2px 18px rgba(46,42,38,0.55);
+  text-align: right;
+}
+
+.index-hero-section .index-hero-h1-accent {
+  color: #F2D2B0;
+  font-weight: 600;
+}
+
+.index-hero-section .index-hero-h3 {
+  font-family: 'Assistant', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(243,235,221,0.88);
+  margin: 0;
+  max-width: 540px;
+  text-align: right;
+  text-shadow: 0 1px 8px rgba(46,42,38,0.45);
+}
+
+.index-hero-section .index-hero-cta-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.index-hero-section .index-hero-btn-primary {
+  display: inline-block;
+  font-family: 'Assistant', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFDF9;
+  background: #D86F45;
+  padding: 14px 30px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(216,111,69,0.38);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.index-hero-section .index-hero-btn-primary:hover {
+  background: #c45e34;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(216,111,69,0.45);
+  color: #FFFDF9;
+}
+
+.index-hero-section .index-hero-btn-ghost {
+  display: inline-block;
+  font-family: 'Assistant', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(243,235,221,0.9);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(243,235,221,0.35);
+  padding: 13px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.index-hero-section .index-hero-btn-ghost:hover {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(243,235,221,0.65);
+  transform: translateY(-2px);
+  color: #FFFDF9;
+}
+
+.index-hero-section .index-hero-divider-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.index-hero-section .index-hero-divider-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .index-hero-section {
+    min-height: 100svh;
+    padding-bottom: 60px;
+    align-items: flex-end;
+  }
+
+  .index-hero-section .index-hero-scrim {
+    background-image:
+      linear-gradient(to top, rgba(46,42,38,0.90) 0%, rgba(46,42,38,0.55) 55%, rgba(46,42,38,0.12) 100%);
+  }
+
+  .index-hero-section .index-hero-content-wrap {
+    padding: 0 20px 32px 20px;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .index-hero-section .index-hero-h1 {
+    font-size: 2.1rem;
+    line-height: 1.18;
+  }
+
+  .index-hero-section .index-hero-h3 {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .index-hero-section .index-hero-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .index-hero-section .index-hero-btn-primary,
+  .index-hero-section .index-hero-btn-ghost {
+    width: 100%;
+    text-align: center;
+  }
+
+  .index-hero-section .index-hero-divider-wrapper {
+    height: 50px;
+  }
+}
+</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -818,32 +1045,27 @@
 </script>
   
   <main>
-    <section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim">
-  <!-- Background Image -->
-  <div class="index-hero-bg">
-    <img data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Warm close-up lifestyle flatlay of personalized stationery gifts: a custom notebook with a name embossed on the cover, a ribbon-tied gift tag, small decorative keychains, dried flowers, and wrapped kraft paper gift boxes arranged on a natural linen or light wood surface. Soft warm natural lighting, cream and terracotta tones, handcrafted and intimate feel, premium product photography style." width="1200" height="700" src="/assets/site-index-hero-image-1.webp" alt="מוצרי מתנה אישיים – מחברות, מחזיקי מפתחות ומתנות מעוצבות של LU">
+    <section class="index-hero-section" data-layout-spec="בית-hero" dir="rtl" data-hero-type="fullscreen-scrim" data-zappy-section="true">
+  <div class="index-hero-bg-wrap">
+    <div class="index-hero-bg" style="background-image: url('assets/site-index-hero-image-1.webp'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+    <div class="index-hero-scrim"></div>
   </div>
 
-  <!-- Scrim Overlay -->
-  <div class="index-hero-scrim" aria-hidden="true"></div>
-
-  <!-- Overlay Card Panel -->
-  <div class="index-hero-container">
-    <div class="index-hero-card">
-      <span class="index-hero-label">מתנות בעיצוב אישי</span>
-      <h1 class="index-hero-h1">המתנה הכי אישית<br>שיש — זו שלך</h1>
-      <h3 class="index-hero-subtitle">מחברות, מחזיקי מפתחות ומוצרי מתנה מיוחדים,<br>מעוצבים במיוחד עבורך ועבור האנשים שאוהבים אותך.</h3>
-      <div class="index-hero-ctas">
-        <a href="/contact" class="index-hero-btn-primary">בואו נתחיל לתכנן מתנה</a>
-        <a href="/contact" class="index-hero-btn-secondary">שאלות על התאמה אישית</a>
-      </div>
+  <div class="index-hero-content-wrap">
+    <div class="index-hero-badge-row">
+      <span class="index-hero-badge">מתנות בעיצוב אישי</span>
+    </div>
+    <h1 class="index-hero-h1">המתנה הכי אישית<br><span class="index-hero-h1-accent">שיש — זו שלך</span></h1>
+    <h3 class="index-hero-h3">מחברות, מחזיקי מפתחות ומוצרי מתנה מיוחדים,<br>מעוצבים במיוחד עבורך ועבור האנשים שאוהבים אותך.</h3>
+    <div class="index-hero-cta-row">
+      <a href="/contact" class="index-hero-btn-primary">בואו נתחיל לתכנן מתנה</a>
+      <a href="/contact" class="index-hero-btn-ghost">שאלות על התאמה אישית</a>
     </div>
   </div>
 
-  <!-- Bottom Torn-Paper Divider -->
   <div class="index-hero-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 88" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,88 L0,44 Q30,36 60,44 T120,40 Q160,48 200,38 T280,44 Q320,36 370,42 T450,38 Q500,46 560,36 T640,42 Q690,36 740,44 T820,38 Q870,46 930,38 T1020,44 Q1070,36 1120,42 T1200,38 Q1280,46 1320,40 T1400,44 L1440,42 L1440,88 Z" fill="#F2E8DB"></path>
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,80 L0,48 Q120,28 240,44 T480,36 Q600,28 720,44 T960,36 Q1080,28 1200,42 T1440,36 L1440,80 Z" fill="#F2E8DB"></path>
     </svg>
   </div>
 </section>
@@ -877,7 +1099,7 @@
     <div class="showcase-intro">
       <p><span class="showcase-eyebrow">הקולקציה שלנו</span>
       </p><h2 class="showcase-heading">בחרי את הרגש לפני שבוחרים את המוצר</h2>
-      <p class="showcase-subtext" style="">ב-LU אנחנו מאמינות שמתנה טובה מתחילה בתחושה — חום, אהבה, הערכה, שמחה. מהתחושה הזו בוחרים יחד את המוצר המושלם, ומעצבים אותו במיוחד עבור האדם שאתם אוהבים.</p>
+      <p class="showcase-subtext" >ב-LU אנחנו מאמינות שמתנה טובה מתחילה בתחושה — חום, אהבה, הערכה, שמחה. מהתחושה הזו בוחרים יחד את המוצר המושלם, ומעצבים אותו במיוחד עבור האדם שאתם אוהבים.</p>
     </div>
 
     <!-- 2x2 Category Grid -->
@@ -894,7 +1116,7 @@
           </div>
         </div>
         <div class="showcase-card-body">
-          <h3 class="showcase-card-title" style="">מחברות בעיצוב אישי</h3>
+          <h3 class="showcase-card-title" >מחברות בעיצוב אישי</h3>
           <p class="showcase-card-desc">מחברות ריות ומחברות שורות בכריכה רכה, עם שם, ציטוט או עיצוב ייחודי שמרגיש כמו אתם. מתנה שמלווה בכל יום.</p>
         </div>
       </article>
@@ -902,7 +1124,7 @@
       <!-- Card 2: Keychains -->
       <article class="showcase-card" data-grid-item-index="1">
         <div class="showcase-card-img-wrap">
-          <img data-placeholder="index-showcase-image-2" data-context="A collection of custom keychains arranged artfully on a cream linen surface — acrylic, leather, and metal keychains with personal names or initials. Soft natural light, warm tones, close-up product photography." width="600" height="400" src="/assets/site-index-showcase-image-2.webp" alt="מחזיקי מפתחות מעוצבים אישית" class="showcase-card-img" data-element-type="image" data-element-id="img-1776195797878-lya78mc1s" style="">
+          <img data-placeholder="index-showcase-image-2" data-context="A collection of custom keychains arranged artfully on a cream linen surface — acrylic, leather, and metal keychains with personal names or initials. Soft natural light, warm tones, close-up product photography." width="600" height="400" src="/assets/site-index-showcase-image-2.webp" alt="מחזיקי מפתחות מעוצבים אישית" class="showcase-card-img" data-element-type="image" data-element-id="img-1776195797878-lya78mc1s" >
           <div class="showcase-card-doodle showcase-doodle-heart" aria-hidden="true">
             <svg data-element-type="icon" data-icon-type="svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 21C12 21 3 14.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.08C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 14.5 12 21 12 21Z" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round" fill="none"></path>
@@ -918,7 +1140,7 @@
       <!-- Card 3: Small Keepsakes -->
       <article class="showcase-card" data-grid-item-index="2">
         <div class="showcase-card-img-wrap">
-          <img data-placeholder="index-showcase-image-3" data-context="Small personalized keepsake gifts arranged on a warm cream background — custom tags, engraved charms, small decorative tokens with names. Soft editorial lighting, handmade aesthetic, tactile and warm." width="600" height="400" src="/assets/site-index-showcase-image-3.webp" alt="מזכרות קטנות ומיוחדות בעיצוב אישי" class="showcase-card-img" data-element-type="image" data-element-id="img-1776195797878-mcpc6qnhl" style="">
+          <img data-placeholder="index-showcase-image-3" data-context="Small personalized keepsake gifts arranged on a warm cream background — custom tags, engraved charms, small decorative tokens with names. Soft editorial lighting, handmade aesthetic, tactile and warm." width="600" height="400" src="/assets/site-index-showcase-image-3.webp" alt="מזכרות קטנות ומיוחדות בעיצוב אישי" class="showcase-card-img" data-element-type="image" data-element-id="img-1776195797878-mcpc6qnhl" >
           <div class="showcase-card-doodle showcase-doodle-sparkle" aria-hidden="true">
             <svg data-element-type="icon" data-icon-type="svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1V4M11 18V21M1 11H4M18 11H21M3.93 3.93L6.05 6.05M15.95 15.95L18.07 18.07M3.93 18.07L6.05 15.95M15.95 6.05L18.07 3.93" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"></path>
@@ -934,7 +1156,7 @@
       <!-- Card 4: Gift Combos -->
       <article class="showcase-card" data-grid-item-index="3">
         <div class="showcase-card-img-wrap">
-          <img data-placeholder="index-showcase-image-4" data-context="A beautifully styled personalized gift set combination — a custom notebook, keychain, and small keepsake arranged together in kraft paper wrapping with a ribbon, on a warm wooden surface. Gift-ready presentation, warm tones, editorial photography." width="600" height="400" src="/assets/site-index-showcase-image-4.webp" alt="סטים מתנה משולבים ומעוצבים אישית" class="showcase-card-img" data-element-type="image" data-element-id="img-1776195797878-b36u1pwfw" style="">
+          <img data-placeholder="index-showcase-image-4" data-context="A beautifully styled personalized gift set combination — a custom notebook, keychain, and small keepsake arranged together in kraft paper wrapping with a ribbon, on a warm wooden surface. Gift-ready presentation, warm tones, editorial photography." width="600" height="400" src="/assets/site-index-showcase-image-4.webp" alt="סטים מתנה משולבים ומעוצבים אישית" class="showcase-card-img" data-element-type="image" data-element-id="img-1776195797878-b36u1pwfw" >
           <div class="showcase-card-doodle showcase-doodle-ribbon" aria-hidden="true">
             <svg data-element-type="icon" data-icon-type="svg" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 8C13 8 9 4 6 6C3 8 5 12 8 11C11 10 13 8 13 8Z" stroke="var(--primary)" stroke-width="1.4" stroke-linejoin="round" fill="none"></path>
@@ -946,14 +1168,14 @@
         </div>
         <div class="showcase-card-body">
           <h3 class="showcase-card-title">סטים מתנה מוכנים לעטיפה</h3>
-          <p class="showcase-card-desc" style="">קומבינציות מוכנות מראש של מוצרים מתואמים — כי לפעמים המתנה הכי טובה היא כזו שחשבו עליה עד הפרט האחרון.</p>
+          <p class="showcase-card-desc" >קומבינציות מוכנות מראש של מוצרים מתואמים — כי לפעמים המתנה הכי טובה היא כזו שחשבו עליה עד הפרט האחרון.</p>
         </div>
       </article>
 
     </div><!-- end .showcase-grid -->
 
     <!-- Supporting note -->
-    <p class="showcase-catalog-note" style="">
+    <p class="showcase-catalog-note" >
       <i class="fa-regular fa-bookmark" aria-hidden="true" data-element-type="icon" data-element-id="icon-1776195797877-2izuboywk" data-icon-type="fontawesome" style="cursor: pointer;"></i>
       כל מוצר מוצג עם מחיר ברור בקטלוג הנפרד — מחולק לפי קטגוריות, פשוט לניווט, ונוח לבחירה.
     </p>
@@ -1044,7 +1266,7 @@
     <div class="its-header">
       <p><span class="its-eyebrow">מה אומרים הלקוחות שלנו</span>
       </p><h2 class="its-title">מתנות שמרגישות אישיות — כי הן באמת כאלה</h2>
-      <p class="its-subtitle" style="">לשותפים, חברים, מורים, ימי הולדת ורגעים קטנים שראויים לתשומת לב — LU כאן בשבילכם.</p>
+      <p class="its-subtitle" >לשותפים, חברים, מורים, ימי הולדת ורגעים קטנים שראויים לתשומת לב — LU כאן בשבילכם.</p>
     </div>
 
     <!-- Asymmetric Testimonials Grid -->
