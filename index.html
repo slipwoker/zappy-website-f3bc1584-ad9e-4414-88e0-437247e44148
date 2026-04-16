@@ -465,21 +465,38 @@
 }
 </style>
 
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .index-showcase-section {
-  background-color: #F8F3EC;
-  background-image: radial-gradient(rgba(199,154,98,0.16) 1px, transparent 1px);
-  background-size: 14px 14px;
-  color: var(--text-dark);
-  padding: 100px 20px 80px;
-  direction: rtl;
   position: relative;
   overflow: visible;
+  background-color: #FBF7F1;
+  background-image:
+    radial-gradient(ellipse at 10% 20%, rgba(201,168,76,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 80%, rgba(184,92,56,0.08) 0%, transparent 55%),
+    linear-gradient(180deg, #FBF7F1 0%, #F2E8DB 100%);
+  color: var(--text-dark);
+  padding: 90px 24px 100px;
+  direction: rtl;
+  font-family: 'Assistant', sans-serif;
 }
 
-/* ── Container ── */
+/* Dot pattern overlay */
+.index-showcase-section .showcase-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  background-image: radial-gradient(rgba(199,154,98,0.13) 1px, transparent 1px);
+  background-size: 18px 18px;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .index-showcase-section .showcase-container {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -487,238 +504,220 @@
 /* ── Header ── */
 .index-showcase-section .showcase-header {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 56px;
+  margin-bottom: 48px;
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: 48px;
 }
 
 .index-showcase-section .showcase-eyebrow {
   display: inline-block;
-  font-family: Assistant, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--primary);
-  background: rgba(184,92,56,0.10);
+  background: rgba(184,92,56,0.09);
+  padding: 5px 16px;
   border-radius: 999px;
-  padding: 5px 18px;
   margin-bottom: 16px;
 }
 
-.index-showcase-section .showcase-title {
-  font-family: Assistant, sans-serif;
+.index-showcase-section .showcase-header h2 {
   font-size: 30px;
   font-weight: 600;
   line-height: 1.25;
   color: #6A4A36;
   margin: 0 0 18px;
-  max-width: none !important;
+  text-align: center;
 }
 
-.index-showcase-section .showcase-subtitle {
-  font-family: Assistant, sans-serif;
+.index-showcase-section .showcase-intro {
   font-size: 16px;
   line-height: 1.8;
   color: #7A5A45;
-  margin: 0;
   text-align: center;
-  max-width: none !important;
+  margin: 0;
 }
 
-/* ── Grid ── */
+/* ── Catalog Note ── */
+.index-showcase-section .catalog-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--secondary);
+  background: rgba(107,123,94,0.08);
+  border: 1px solid rgba(107,123,94,0.2);
+  border-radius: 999px;
+  padding: 10px 24px;
+  max-width: 600px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.index-showcase-section .catalog-note i {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── Showcase Grid ── */
 .index-showcase-section .showcase-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto auto;
   gap: 24px;
   direction: rtl;
 }
 
-/* ── Cards ── */
+/* Card 1 - featured (spans 7 cols) */
+.index-showcase-section .card-featured {
+  grid-column: span 7;
+}
+
+/* Card 2 - tall (spans 5 cols) */
+.index-showcase-section .card-tall {
+  grid-column: span 5;
+}
+
+/* Card 3 - normal (spans 5 cols) */
+.index-showcase-section .showcase-card:nth-child(3) {
+  grid-column: span 5;
+}
+
+/* Card 4 - wide bottom (spans 7 cols) */
+.index-showcase-section .card-wide {
+  grid-column: span 7;
+}
+
+/* ── Card Base ── */
 .index-showcase-section .showcase-card {
   background: #FBF7F1;
   border-radius: 22px;
   box-shadow: 0 8px 22px rgba(124,90,63,0.12);
   border: 1px solid #E9DCCF;
   overflow: hidden;
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
   display: flex;
   flex-direction: column;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
 .index-showcase-section .showcase-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 48px rgba(124,90,63,0.20);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 48px rgba(124,90,63,0.2);
 }
 
-/* Large card spans 2 rows in the first column */
-.index-showcase-section .showcase-card--large {
-  grid-row: span 2;
-}
-
-/* Wide card spans full width (bottom row) */
-.index-showcase-section .showcase-card--wide {
-  grid-column: 1 / -1;
-}
-
-/* ── Card Image Wrap ── */
-.index-showcase-section .showcase-card__image-wrap {
+/* ── Card Image ── */
+.index-showcase-section .card-image-wrap {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
 
-.index-showcase-section .showcase-card--large .showcase-card__image-wrap {
-  height: 320px;
+.index-showcase-section .card-featured .card-image-wrap {
+  height: 280px;
 }
 
-.index-showcase-section .showcase-card:not(.showcase-card--large):not(.showcase-card--wide) .showcase-card__image-wrap {
-  height: 200px;
+.index-showcase-section .card-tall .card-image-wrap {
+  height: 280px;
 }
 
-.index-showcase-section .showcase-card__img {
+.index-showcase-section .showcase-card:nth-child(3) .card-image-wrap {
+  height: 220px;
+}
+
+.index-showcase-section .card-wide .card-image-wrap {
+  height: 220px;
+}
+
+.index-showcase-section .card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.45s ease;
 }
 
-.index-showcase-section .showcase-card:hover .showcase-card__img {
-  transform: scale(1.05);
+.index-showcase-section .showcase-card:hover .card-img {
+  transform: scale(1.04);
 }
 
-/* ── Badge ── */
-.index-showcase-section .showcase-card__badge {
+/* ── Card Badge ── */
+.index-showcase-section .card-badge {
   position: absolute;
   top: 14px;
-  right: 14px;
-  width: 38px;
-  height: 38px;
-  background: rgba(251,247,241,0.92);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(124,90,63,0.18);
-  color: var(--primary);
-  font-size: 15px;
+  inset-inline-start: 14px;
+  background: rgba(216,111,69,0.92);
+  color: #FFFDF9;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
   z-index: 2;
 }
 
-.index-showcase-section .showcase-card__badge--inline {
-  position: static;
-  margin-bottom: 12px;
-  width: 44px;
-  height: 44px;
-  background: rgba(184,92,56,0.10);
-  box-shadow: none;
-  font-size: 18px;
-}
-
-/* ── Card Body ── */
-.index-showcase-section .showcase-card__body {
-  padding: 22px 22px 20px;
+/* ── Card Content ── */
+.index-showcase-section .card-content {
+  padding: 22px 24px 24px;
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.index-showcase-section .showcase-card__title {
-  font-family: Assistant, sans-serif;
+.index-showcase-section .card-icon-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.index-showcase-section .card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(184,92,56,0.10);
+  color: var(--primary);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.index-showcase-section .card-content h3 {
   font-size: 22px;
   font-weight: 600;
   line-height: 1.3;
   color: #6A4A36;
   margin: 0;
-  text-align: right;
 }
 
-.index-showcase-section .showcase-card__desc {
-  font-family: Assistant, sans-serif;
+.index-showcase-section .card-content p {
   font-size: 16px;
   line-height: 1.7;
   color: #7A5A45;
   margin: 0;
-  text-align: right;
-  flex: 1;
 }
 
-.index-showcase-section .showcase-card__tag {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-  background: rgba(201,168,76,0.12);
-  color: var(--accent);
-  border-radius: 999px;
-  padding: 4px 14px;
-  font-size: 13px;
-  font-weight: 600;
-  align-self: flex-start;
-  margin-top: 4px;
+/* ── Divider ── */
+.index-showcase-section .showcase-divider-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  pointer-events: none;
+  z-index: 5;
 }
 
-.index-showcase-section .showcase-card__tag i {
-  font-size: 12px;
-}
-
-/* ── Wide Card ── */
-.index-showcase-section .showcase-card-wide__inner {
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  direction: rtl;
-  min-height: 280px;
-}
-
-.index-showcase-section .showcase-card-wide__image-wrap {
-  overflow: hidden;
+.index-showcase-section .showcase-divider-wrapper svg {
+  display: block;
+  width: 100%;
   height: 100%;
-  min-height: 260px;
-}
-
-.index-showcase-section .showcase-card-wide__image-wrap .showcase-card__img {
-  height: 100%;
-  min-height: 260px;
-}
-
-.index-showcase-section .showcase-card-wide__content {
-  padding: 36px 36px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  justify-content: center;
-  text-align: right;
-}
-
-/* ── Catalog Note ── */
-.index-showcase-section .showcase-catalog-note {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 10px;
-  background: rgba(184,92,56,0.07);
-  border-radius: 12px;
-  padding: 14px 16px;
-  margin-top: 6px;
-  border-inline-start: 3px solid var(--primary);
-}
-
-.index-showcase-section .showcase-catalog-note i {
-  color: var(--primary);
-  font-size: 16px;
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-.index-showcase-section .showcase-catalog-note p {
-  font-family: Assistant, sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #7A5A45;
-  margin: 0;
-  text-align: right;
 }
 
 /* ── RESPONSIVE ── */
@@ -726,71 +725,58 @@
   .index-showcase-section .showcase-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .index-showcase-section .showcase-card--large {
-    grid-row: span 1;
-    grid-column: 1 / -1;
+  .index-showcase-section .card-featured,
+  .index-showcase-section .card-tall,
+  .index-showcase-section .showcase-card:nth-child(3),
+  .index-showcase-section .card-wide {
+    grid-column: span 1;
   }
-
-  .index-showcase-section .showcase-card--large .showcase-card__image-wrap {
-    height: 260px;
+  .index-showcase-section .card-featured .card-image-wrap,
+  .index-showcase-section .card-tall .card-image-wrap {
+    height: 240px;
   }
-
-  .index-showcase-section .showcase-card-wide__inner {
-    grid-template-columns: 1fr 1fr;
+  .index-showcase-section .showcase-card:nth-child(3) .card-image-wrap,
+  .index-showcase-section .card-wide .card-image-wrap {
+    height: 200px;
   }
 }
 
 @media (max-width: 768px) {
   .index-showcase-section {
-    padding: 100px 16px 60px;
+    padding: 80px 16px 90px;
   }
-
   .index-showcase-section .showcase-header {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
-
-  .index-showcase-section .showcase-title {
+  .index-showcase-section .showcase-header h2 {
     font-size: 24px;
   }
-
+  .index-showcase-section .catalog-note {
+    font-size: 0.8125rem;
+    padding: 9px 18px;
+    margin-bottom: 36px;
+  }
   .index-showcase-section .showcase-grid {
     grid-template-columns: 1fr !important;
     gap: 18px;
   }
-
-  .index-showcase-section .showcase-card--large {
-    grid-row: span 1 !important;
-    grid-column: auto !important;
+  .index-showcase-section .card-featured,
+  .index-showcase-section .card-tall,
+  .index-showcase-section .showcase-card:nth-child(3),
+  .index-showcase-section .card-wide {
+    grid-column: span 1 !important;
   }
-
-  .index-showcase-section .showcase-card--large .showcase-card__image-wrap {
-    height: 220px;
-  }
-
-  .index-showcase-section .showcase-card--wide {
-    grid-column: auto !important;
-  }
-
-  .index-showcase-section .showcase-card-wide__inner {
-    grid-template-columns: 1fr !important;
-  }
-
-  .index-showcase-section .showcase-card-wide__image-wrap {
-    min-height: 200px;
+  .index-showcase-section .card-featured .card-image-wrap,
+  .index-showcase-section .card-tall .card-image-wrap,
+  .index-showcase-section .showcase-card:nth-child(3) .card-image-wrap,
+  .index-showcase-section .card-wide .card-image-wrap {
     height: 200px;
   }
-
-  .index-showcase-section .showcase-card-wide__content {
-    padding: 22px 18px 20px;
+  .index-showcase-section .card-content {
+    padding: 16px 18px 18px;
   }
-
-  .index-showcase-section .showcase-card__body {
-    padding: 16px 16px 16px;
-  }
-
-  .index-showcase-section .showcase-card:not(.showcase-card--large):not(.showcase-card--wide) .showcase-card__image-wrap {
-    height: 180px;
+  .index-showcase-section .card-content h3 {
+    font-size: 18px;
   }
 }
 </style>
@@ -1405,101 +1391,99 @@
 
   <div class="index-hero-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,80 L0,48 Q120,28 240,44 T480,36 Q600,28 720,44 T960,36 Q1080,28 1200,42 T1440,36 L1440,80 Z" fill="#F2E8DB"></path>
+      <path d="M0,80 L0,48 Q120,28 240,44 T480,36 Q600,28 720,44 T960,36 Q1080,28 1200,42 T1440,36 L1440,80 Z" fill="#F8F3EC"></path>
     </svg>
   </div>
 </section>
 
     <section class="index-showcase-section" data-layout-spec="בית-showcase" dir="rtl" data-zappy-section="true" id="featured-products">
+  <div class="showcase-bg-pattern"></div>
+
   <div class="showcase-container">
 
     <!-- Section Header -->
     <div class="showcase-header">
       <span class="showcase-eyebrow">הקולקציה שלנו</span>
-      <h2 class="showcase-title">בחרי את הרגש לפני שבוחרים את המוצר</h2>
-      <p class="showcase-subtitle">ב-LU אנחנו מאמינות שמתנה טובה מתחילה בתחושה — חום, אהבה, הערכה, שמחה. מהתחושה הזו בוחרים יחד את המוצר המושלם, ומעצבים אותו במיוחד עבור האדם שאתם אוהבים.</p>
+      <h2>בחרי את הרגש לפני שבוחרים את המוצר</h2>
+      <p class="showcase-intro">ב-LU אנחנו מאמינות שמתנה טובה מתחילה בתחושה — חום, אהבה, הערכה, שמחה. מהתחושה הזו בוחרים יחד את המוצר המושלם, ומעצבים אותו במיוחד עבור האדם שאתם אוהבים.</p>
     </div>
 
-    <!-- Products Grid -->
+    <!-- Catalog Note -->
+    <p class="catalog-note"><i class="fa-solid fa-tag" aria-hidden="true"></i> כל מוצר מוצג עם מחיר ברור בקטלוג הנפרד — מחולק לפי קטגוריות, פשוט לניווט, ונוח לבחירה.</p>
+
+    <!-- Showcase Grid -->
     <div class="showcase-grid">
 
-      <!-- Card 1 - Notebooks -->
-      <article class="showcase-card card-default showcase-card--large">
-        <div class="showcase-card__image-wrap">
-          <img alt="מחברות בעיצוב אישי מבית LU LOVE YOU" class="showcase-card__img" src="/assets/site-index-showcase-image-1.webp" data-placeholder="index-showcase-image-1" data-context="Close-up of a beautifully personalized notebook with a custom name engraved or printed on a soft cream-colored cover, lying on a wooden desk with a ribbon and dried flowers nearby. Warm, editorial, stationery aesthetic." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-          <div class="showcase-card__badge">
-            <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
-          </div>
+      <!-- Card 1 - Large Featured -->
+      <article class="showcase-card card-featured">
+        <div class="card-image-wrap">
+          <img alt="מחברות בעיצוב אישי מבית LU LOVE YOU" class="card-img" src="/assets/site-index-showcase-image-1.webp" data-placeholder="index-showcase-image-1" data-context="Close-up of a beautifully personalized notebook with a custom name engraved or printed on a soft cream-colored cover, lying on a wooden desk with a ribbon and dried flowers nearby. Warm, editorial, stationery aesthetic." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          <div class="card-badge">מתנה אישית</div>
         </div>
-        <div class="showcase-card__body">
-          <h3 class="showcase-card__title">מחברות בעיצוב אישי</h3>
-          <p class="showcase-card__desc">מחברות ריות ומחברות שורות בכריכה רכה, עם שם, ציטוט או עיצוב ייחודי שמרגיש כמו אתם. מתנה שמלווה בכל יום.</p>
-          <div class="showcase-card__tag">
-            <i class="fa-regular fa-heart" aria-hidden="true"></i>
-            <span>מתנה אישית</span>
+        <div class="card-content">
+          <div class="card-icon-row">
+            <span class="card-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span>
+            <h3>מחברות בעיצוב אישי</h3>
           </div>
+          <p>מחברות ריות ומחברות שורות בכריכה רכה, עם שם, ציטוט או עיצוב ייחודי שמרגיש כמו אתם. מתנה שמלווה בכל יום.</p>
         </div>
       </article>
 
-      <!-- Card 2 - Keychains -->
-      <article class="showcase-card card-default">
-        <div class="showcase-card__image-wrap">
-          <img alt="מחזיקי מפתחות מעוצבים אישית" class="showcase-card__img" src="/assets/site-index-showcase-image-2.webp" data-placeholder="index-showcase-image-2" data-context="A collection of custom keychains arranged artfully on a cream linen surface — acrylic, leather, and metal keychains with personal names or initials. Soft natural light, warm tones, close-up product photography." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-          <div class="showcase-card__badge">
-            <i class="fa-solid fa-key" aria-hidden="true"></i>
-          </div>
+      <!-- Card 2 -->
+      <article class="showcase-card card-tall">
+        <div class="card-image-wrap">
+          <img alt="מחזיקי מפתחות מעוצבים אישית" class="card-img" src="/assets/site-index-showcase-image-2.webp" data-placeholder="index-showcase-image-2" data-context="A collection of custom keychains arranged artfully on a cream linen surface — acrylic, leather, and metal keychains with personal names or initials. Soft natural light, warm tones, close-up product photography." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          <div class="card-badge">פריט מיוחד</div>
         </div>
-        <div class="showcase-card__body">
-          <h3 class="showcase-card__title">מחזיקי מפתחות מעוצבים</h3>
-          <p class="showcase-card__desc">מחזיקי מפתחות קטנים שנושאים בתוכם משמעות גדולה — שם, תאריך, מסר קצר. קטן, אישי, ובלתי נשכח.</p>
-          <div class="showcase-card__tag">
-            <i class="fa-regular fa-star" aria-hidden="true"></i>
-            <span>פריט מיוחד</span>
+        <div class="card-content">
+          <div class="card-icon-row">
+            <span class="card-icon"><i class="fa-solid fa-key" aria-hidden="true"></i></span>
+            <h3>מחזיקי מפתחות מעוצבים</h3>
           </div>
+          <p>מחזיקי מפתחות קטנים שנושאים בתוכם משמעות גדולה — שם, תאריך, מסר קצר. קטן, אישי, ובלתי נשכח.</p>
         </div>
       </article>
 
-      <!-- Card 3 - Souvenirs -->
-      <article class="showcase-card card-default">
-        <div class="showcase-card__image-wrap">
-          <img alt="מזכרות קטנות ומיוחדות בעיצוב אישי" class="showcase-card__img" src="/assets/site-index-showcase-image-3.webp" data-placeholder="index-showcase-image-3" data-context="Small personalized keepsake gifts arranged on a warm cream background — custom tags, engraved charms, small decorative tokens with names. Soft editorial lighting, handmade aesthetic, tactile and warm." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-          <div class="showcase-card__badge">
-            <i class="fa-solid fa-gift" aria-hidden="true"></i>
-          </div>
+      <!-- Card 3 -->
+      <article class="showcase-card">
+        <div class="card-image-wrap">
+          <img alt="מזכרות קטנות ומיוחדות בעיצוב אישי" class="card-img" src="/assets/site-index-showcase-image-3.webp" data-placeholder="index-showcase-image-3" data-context="Small personalized keepsake gifts arranged on a warm cream background — custom tags, engraved charms, small decorative tokens with names. Soft editorial lighting, handmade aesthetic, tactile and warm." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          <div class="card-badge">מלא רגש</div>
         </div>
-        <div class="showcase-card__body">
-          <h3 class="showcase-card__title">מזכרות קטנות ומיוחדות</h3>
-          <p class="showcase-card__desc">פריטים קטנים שמכילים רגש גדול — מגנטים, תגיות, וקישוטים מיניאטוריים שמספרים סיפור אישי בכל מבט.</p>
-          <div class="showcase-card__tag">
-            <i class="fa-regular fa-heart" aria-hidden="true"></i>
-            <span>מלא רגש</span>
+        <div class="card-content">
+          <div class="card-icon-row">
+            <span class="card-icon"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+            <h3>מזכרות קטנות ומיוחדות</h3>
           </div>
+          <p>פריטים קטנים שמכילים רגש גדול — מגנטים, תגיות, וקישוטים מיניאטוריים שמספרים סיפור אישי בכל מבט.</p>
         </div>
       </article>
 
-      <!-- Card 4 - Gift Sets - Full width -->
-      <article class="showcase-card card-default showcase-card--wide">
-        <div class="showcase-card-wide__inner">
-          <div class="showcase-card-wide__image-wrap">
-            <img alt="סטים מתנה משולבים ומעוצבים אישית" class="showcase-card__img" src="/assets/site-index-showcase-image-4.webp" data-placeholder="index-showcase-image-4" data-context="A beautifully styled personalized gift set combination — a custom notebook, keychain, and small keepsake arranged together in kraft paper wrapping with a ribbon, on a warm wooden surface. Gift-ready presentation, warm tones, editorial photography." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+      <!-- Card 4 - Wide Bottom -->
+      <article class="showcase-card card-wide">
+        <div class="card-image-wrap">
+          <img alt="סטים מתנה משולבים ומעוצבים אישית" class="card-img" src="/assets/site-index-showcase-image-4.webp" data-placeholder="index-showcase-image-4" data-context="A beautifully styled personalized gift set combination — a custom notebook, keychain, and small keepsake arranged together in kraft paper wrapping with a ribbon, on a warm wooden surface. Gift-ready presentation, warm tones, editorial photography." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          <div class="card-badge">מתנה אישית</div>
+        </div>
+        <div class="card-content">
+          <div class="card-icon-row">
+            <span class="card-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></span>
+            <h3>סטים מתנה מוכנים לעטיפה</h3>
           </div>
-          <div class="showcase-card-wide__content">
-            <div class="showcase-card__badge showcase-card__badge--inline">
-              <i class="fa-solid fa-box-open" aria-hidden="true"></i>
-            </div>
-            <h3 class="showcase-card__title">סטים מתנה מוכנים לעטיפה</h3>
-            <p class="showcase-card__desc">קומבינציות מוכנות מראש של מוצרים מתואמים — כי לפעמים המתנה הכי טובה היא כזו שחשבו עליה עד הפרט האחרון.</p>
-            <div class="showcase-catalog-note">
-              <i class="fa-solid fa-tags" aria-hidden="true"></i>
-              <p>כל מוצר מוצג עם מחיר ברור בקטלוג הנפרד — מחולק לפי קטגוריות, פשוט לניווט, ונוח לבחירה.</p>
-            </div>
-          </div>
+          <p>קומבינציות מוכנות מראש של מוצרים מתואמים — כי לפעמים המתנה הכי טובה היא כזו שחשבו עליה עד הפרט האחרון.</p>
         </div>
       </article>
 
     </div>
-    <!-- /Products Grid -->
+    <!-- end grid -->
 
+  </div>
+
+  <!-- Bottom divider -->
+  <div class="showcase-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,70 L0,38 Q100,28 200,36 T400,30 Q500,24 600,34 T800,28 Q900,22 1000,32 T1200,26 L1200,70 Z" fill="#F2E8DB"></path>
+    </svg>
   </div>
 </section>
   
